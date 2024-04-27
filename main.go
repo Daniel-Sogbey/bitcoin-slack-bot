@@ -66,7 +66,7 @@ func main() {
 	log.Println("TIME NOW : ", time.Now())
 
 	//seconds,minutes, hours, day of month, month, day of week
-	cronJob.AddFunc("*/5 * * * *", func() {
+	cronJob.AddFunc("0 0 12 * * *", func() {
 		log.Println("Cron job running...")
 		if oldCoinData.Data.Price > coinData.Data.Price {
 			fmt.Println("HERE")
